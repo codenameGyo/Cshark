@@ -39,7 +39,6 @@ builder.Services.AddSignalR();
 var app = builder.Build();
 app.MapControllers();
 
-app.MapGet("/", () => "Hello World!");
 
 
 app.MapHub<ChatHub>("/r/chat");
@@ -49,5 +48,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
+app.MapFallbackToFile("index.html");
 
 app.Run();
