@@ -2,10 +2,11 @@ namespace Chat.Models;
 
 public class Message
 {
-    public Message(int id, string text,  DateTime created, int channelId, int userId)
+    public Message(int id, string text, string userName, DateTime created, int channelId, int userId)
     {
         Id = id;
         Text = text;
+        UserName = userName;
         Created = created;
         ChannelId = channelId;
         UserId = userId;
