@@ -9,8 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 // service
 
 var connectionString = Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING");
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8081";
-builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
+// var port = Environment.GetEnvironmentVariable("PORT") ?? "8081";
+// builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 Console.WriteLine($"Connection string: {connectionString}");
 builder.Services.AddDbContext<DatabaseContext>(
     opt =>
@@ -51,8 +51,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseDefaultFiles();
-app.UseStaticFiles();
-app.MapFallbackToFile("index.html");
+// app.UseDefaultFiles();
+// app.UseStaticFiles();
+// app.MapFallbackToFile("index.html");
 
 app.Run();
