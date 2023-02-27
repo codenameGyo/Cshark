@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Chat.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20230226225903_InitialCreate")]
+    [Migration("20230227011149_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -113,10 +113,6 @@ namespace Chat.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp with time zone")
                         .HasDefaultValueSql("now()");
-
-                    b.Property<string>("UName")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.Property<string>("UserName")
                         .IsRequired()

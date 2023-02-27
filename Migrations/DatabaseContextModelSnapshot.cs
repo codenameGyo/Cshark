@@ -111,10 +111,6 @@ namespace Chat.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasDefaultValueSql("now()");
 
-                    b.Property<string>("UName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("text");
